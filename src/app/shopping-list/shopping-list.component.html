@@ -1,0 +1,13 @@
+
+<div class="container-fluid">
+    <app-shopping-edit></app-shopping-edit>
+
+    <h1 class="font-weight-light text-success">Shopping List: Ingredients</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let ingredient of ingredients; let i = index"
+            (click)="toEdit(i)" style="cursor: pointer;">
+            {{ingredient.name}} - ({{ ingredient.qty }})
+        </li>
+    </ul>
+</div>

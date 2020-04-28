@@ -1,0 +1,11 @@
+<li class="list-group-item my-2" [routerLink]="[index]" routerLinkActive="active" style="cursor: pointer;">
+    <div class="clearfix">
+        <div class="float-left">
+            <h5>{{ recipe.name }}</h5>
+            <p>{{ recipe.desc }}</p>
+        </div>
+        <div class="float-right">
+            <img src="{{ recipe.imgurl }}" alt="Recipe">
+        </div>
+    </div>
+</li>

@@ -1,0 +1,9 @@
+img {
+    max-width: 6rem;
+}
+
+li.active {
+    background-color: #28a745;
+    border: 1px solid  #28a745;
+    outline: none !important;
+}

@@ -1,0 +1,6 @@
+<h3 class="font-weight-normal text-success">List of Recipes</h3>
+
+<ul class="list-group">
+    <app-recipe-item *ngFor="let recipe of recipes; let i = index" 
+        [recipe]="recipe" [index]="i"></app-recipe-item>
+</ul>

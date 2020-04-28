@@ -1,0 +1,34 @@
+<div class="my-4">
+    <h3 class="text-success font-weight-light">Edit shopping list: Ingredients</h3>
+    <form (ngSubmit)="addIngredient(f.value)" #f="ngForm">
+        <div class="row">
+            <div class="col-lg-9">
+                <label for="name">Ingredient name: </label>
+                <input type="text" class="form-control" name="name" id="name" ngModel required #ing="ngModel">
+                <small class="text-danger" *ngIf="ing.invalid && ing.touched">Please enter a valid ingredient</small>
+            </div>
+            <div class="col-lg-3">
+                <label for="name">Quantity: </label>
+                <input type="number" class="form-control" name="qty" ngModel required #qty="ngModel">
+                <small class="text-danger" *ngIf="qty.invalid && qty.touched">Please enter a number</small>
+                <small class="text-danger" *ngIf="qty.value > 1000">Enter a number less than 1000</small>
+            </div>
+        </div>
+
+        <div class="my-4 d-flex justify-content-between col-3">
+            <button type="submit" class="btn btn-success rounded-0" *ngIf="!editMode" [disabled]="!f.valid">
+                Add Ingredient
+            </button>
+            <button type="button" class="btn btn-warning rounded-0" *ngIf="editMode" (click)="updateIngredient()">
+                Update
+            </button>
+            <button type="button" class="btn btn-danger rounded-0" *ngIf="editMode" (click)="removeIngredient()">
+                Remove
+            </button>
+            <button type="button" class="btn btn-primary rounded-0" *ngIf="editMode" (click)="clearEdit()">
+                Clear
+            </button>
+        </div>
+        
+    </form>
+</div>

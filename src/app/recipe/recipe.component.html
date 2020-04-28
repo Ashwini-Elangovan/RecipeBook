@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <button type="button" class="btn btn-success rounded-0 my-2" [routerLink]="['new']">New Recipe</button>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <app-recipe-list></app-recipe-list>
+        </div>
+        <div class="col-lg-6">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

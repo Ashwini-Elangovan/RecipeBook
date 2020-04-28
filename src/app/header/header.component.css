@@ -1,0 +1,10 @@
+.dropdown-menu {
+    left: inherit;
+    right: 0;
+}
+.navbar-brand {
+    color: greenyellow;
+}
+.navbar-brand:hover {
+    color: greenyellow;
+}
